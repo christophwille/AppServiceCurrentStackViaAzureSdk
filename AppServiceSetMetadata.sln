@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33513.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppServiceSetMetadata", "AppServiceSetMetadata.csproj", "{706242C2-55A8-4058-933C-F6ACF0979EA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{706242C2-55A8-4058-933C-F6ACF0979EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706242C2-55A8-4058-933C-F6ACF0979EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706242C2-55A8-4058-933C-F6ACF0979EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706242C2-55A8-4058-933C-F6ACF0979EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87CBD559-7A10-4F97-BEBD-25749C5D7792}
+	EndGlobalSection
+EndGlobal
