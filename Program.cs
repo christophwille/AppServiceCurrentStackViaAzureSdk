@@ -1,13 +1,16 @@
-﻿using Azure;
+﻿// Note: Tools / Options / Azure Service Authentication is what is used when F5-ing into to app
+
+using Azure;
 using Azure.Core;
 using Azure.Identity;
-// Note: Tools / Options / Azure Service Authentication is what is used when F5-ing into to app
 
 using Azure.ResourceManager;
 using Azure.ResourceManager.AppService;
 using Azure.ResourceManager.AppService.Models;
 using Azure.ResourceManager.Models;
 using Azure.ResourceManager.Resources;
+
+using JsonObject = System.Collections.Generic.Dictionary<string, object>;
 
 const string DEMO_RG = "demo-appservice-metadata";
 const string DEMO_PLAN = "demoappplancw123456789";
@@ -74,7 +77,11 @@ WebSiteResource webSite = await wsOp.WaitForCompletionAsync();
 GenericResourceData metadataCreationData = new GenericResourceData(DEMO_LOCATION) // the internal ctor looks interesting though
 {
     Kind = "web",
-    Properties = BinaryData.FromString("{ \"CURRENT_STACK\":\"dotnetcore\" }")
+    // Properties = BinaryData.FromString("{ \"CURRENT_STACK\":\"dotnet\" }"),
+    Properties = BinaryData.FromObjectAsJson(
+        new JsonObject() {
+           { "CURRENT_STACK", "dotnet" }
+        })
 };
 
 // ... /resourceGroups/demo-appservice-metadata/providers/Microsoft.Web/sites/demositecw123456789/config/metadata
