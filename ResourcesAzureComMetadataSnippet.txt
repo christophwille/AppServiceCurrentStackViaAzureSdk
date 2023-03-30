@@ -1,0 +1,14 @@
+PUT sample from resources.azure.com
+
+https://management.azure.com/subscriptions/SUBIDHERE/resourceGroups/demo-appservice-metadata/providers/Microsoft.Web/sites/demositecw123456789/config/metadata/list?api-version=2020-12-01
+
+{
+  "id": "/subscriptions/SUBIDHERE/resourceGroups/demo-appservice-metadata/providers/Microsoft.Web/sites/demositecw123456789/config/metadata",
+  "name": "metadata",
+  "type": "Microsoft.Web/sites/config",
+  "location": "West Europe",
+  "tags": {},
+  "properties": {
+    "CURRENT_STACK": "dotnet"
+  }
+}
