@@ -18,7 +18,7 @@ const string DEMO_SITE = "demositecw123456789";
 AzureLocation DEMO_LOCATION = AzureLocation.WestEurope;
 
 // https://learn.microsoft.com/en-us/dotnet/azure/sdk/resource-management
-ArmClient client = new ArmClient(new DefaultAzureCredential());
+ArmClient client = new ArmClient(new VisualStudioCredential());
 
 SubscriptionResource subscription = client.GetDefaultSubscription();
 Console.WriteLine("Subscription Id: " + subscription.Data.SubscriptionId);
@@ -85,6 +85,7 @@ GenericResourceData metadataCreationData = new GenericResourceData(DEMO_LOCATION
 };
 
 // ... /resourceGroups/demo-appservice-metadata/providers/Microsoft.Web/sites/demositecw123456789/config/metadata
+var x = webSite.Id.AppendProviderResource("Microsoft.Web", "config", "metadata");
 ResourceIdentifier metadataId = webSite.Id.AppendChildResource("config", "metadata");
 /*System.InvalidOperationException
   HResult=0x80131509
